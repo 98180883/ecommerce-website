@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Login Page</title>
+        <style>
+            header {
+                text-align:center;
+                font-size:10px;
+                background-color:#a6dae6;
+            }
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size:20px;
+                background-color:#ffffff;
+            }
+            input {
+                padding: 10px;
+                margin: 5px 0;
+                width: 200px;
+            }
+            button {
+                padding: 10px 20px;
+                background-color: #60c649;
+                color: rgb(19, 11, 15);
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #4fe929;
+            }
+            </style>
+    </head>
+<body>
+    <header>
+        <h1> login to your account </h1>
+    </header>
+
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Enter username">
+<br><br>
+
+<input type="password" id="password" placeholder="Enter password">
+<br><br>
+
+<button id="login-btn">Login</button>
+
+<p id="msg"></p>
+<p>
+  New user?
+  <a href="register.html">Signup</a>
+</p>
+<script src="login.js"></script>
+</body>
+</html>

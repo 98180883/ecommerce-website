@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+   <meta charset = "UTF-8">
+   <meta name ="viewport"
+   content="width=device-width, initial-scale =1.0" >
+<title>Your Cart</title>
+<link rel="stylesheet" href="cartstyle.css">
+</head>
+<body>
+  <header>
+ <h1>Your Cart</h1>
+  
+</header>
+<main>
+<section class="navi">
+    
+          <h2>Navigation</h2>
+            <a href="index.html">Home</a> 
+              <a href="cartvs.html">Cart</a> 
+                  <a href="contactvs.html">Contact Us</a>
+</section>
+<div class="image"> 
+  <div class="cart-back">
+<div class = "cart">  
+<b><img src="cart1.jpg" alt="cart" width="20">Your Cart Summary</b><br>
+<span id ="cartbox"> Cart Empty </span> 
+<p id ="ca_rt">Total no of items: 0</p>
+<p id ="cart_total"><b>Cart Total: ₹ 0</b></p>
+
+  <p id="delivery_fee">
+    <img id="ship-icon" src="free-ship.jpg" width=35px alt="Free Shipping" />
+    Free ship above 500/-
+  </p>
+    
+  <button id="proceed">Proceed To Buy</button>
+</div>
+</div>
+
+
+<div class = "checkout">
+<h2>Fill The Checkout Form To Order</h2>
+        <form id="checkout-form">
+       <label for ="name">Name:</label><br>
+        <input type ="text" id="name" name="name" placeholder="Enter name" required><br>
+      <label for ="email">Email:</label><br>
+        <input type ="email" id="email" name="email" placeholder="Enter Email-Id" ><br>
+     <label for ="phone">Phone Number:</label><br>
+        <input type ="tel" id="phone" name="phone" placeholder="Enter phone" required><br>
+       <label for ="Adress">Address:</label><br>
+        <textarea id="adress" name="Adress" placeholder="Enter adress" required>
+</textarea><br><br>      
+   <button type ="submit"> Submit </button>
+  <p id="checkout-message"> </p> 
+  </form>
+  </div>
+  
+</div>
+
+</main>
+<footer>
+<p> © 2026 Digital Store <p id = "info">Original text </p></p>
+</footer> 
+
+<script src= "main.js" ></script>
+<script src= "cart-validation.js" ></script>
+
+
+
+</body>
+</html>

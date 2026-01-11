@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Order Confirmation</title>
+        <style>
+            header{
+                text-align: center;
+        
+                padding: 20px;
+                background-color: #b0e3e3;
+                color:rgb(90, 10, 10);
+            }
+           
+            main{
+               text-align: center;
+                background-color:white;
+                margin: auto;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            #order-details{
+                background-color: #81d3d4;
+                color:black;
+                margin: auto;
+                width:fit-content;
+                white-space: pre-line;
+                padding: 15px;
+                border-radius: 4px;
+                font-size:24px;
+                
+            }
+            #feedback {
+                display:flex;
+                flex-direction:column;
+                flex-wrap:wrap;
+                max-width:50%;   
+                margin:auto;
+                margin-top:20px;
+                border-radius: 2px;
+                border: 4px solid #63e372;
+            }
+            button:hover{
+                background-color:rgb(211, 119, 152);
+                cursor:pointer;
+            }
+            input{
+             color:rgb(1, 0, 0);
+                background-color:rgb(255, 255, 255);
+                font-size: 20px;
+                }
+            footer{
+                display:flex;
+                justify-content: left;
+                font-size: 24px;
+                padding: 10px;
+                background-color: #e7e6b1;
+                color: rgb(72, 5, 5);
+             
+            }
+
+            </style>
+    </head>
+    
+<body>
+    <header>
+      
+<strong><img id ="done" src="done.png" alt="Order Confirmation " width="20">Your Order Has Been Successfully Placed!</strong>
+<h3>Hope You Enjoy Your Purchase</h3>
+    </header>
+    <main>
+ <h3>Order Details</h3>  
+<p id="order-details"></p>
+<br><b> Customer Feedback Form </b><br>
+<form id="feedback">
+    <h3>We value your feedback! Please share your thoughts about your shopping experience</h3>
+<input type="text" id ="enjoyed" placeholder="What You enjoyed">
+<input type="text" id="expected" placeholder="What You expected">
+<input type="text" id="feed" placeholder="Your Feedback" required>    
+</form>
+<button type="submit" id="feedBtn">Submit Feedback</button>
+
+<p><b>Continue Shopping <a href="index.html">Here</a></b></p>
+<p id="info">Thank you Shopping With Us</p>
+</main>
+<footer>
+<p>&copy; 2026 Digital Store. All rights reserved.</p>
+</footer>
+
+
+<script src="cart-validation.js"></script>
+<script>
+ 
+ let customerInfo = JSON.parse(localStorage.getItem("customerInfo"));
+ let name = customerInfo.name;
+    let email = customerInfo.email;
+    let phone = customerInfo.phone;
+    let adress = customerInfo.adress;
+
+let productQty = Number(localStorage.getItem("productQty"));
+let orderAmount = Number (localStorage.getItem("orderAmount"));
+let customerPh=Number(phone);
+document.getElementById("order-details").innerText= 
+ "Total No of Items Ordered : " + productQty + "\nOrder Amount : " + orderAmount + "\nOrder ID: Ord-" + new Date().getTime() + "\nCustomer Name: " + name + "\nEmail: " + email + "\nPhone: " + customerPh + "\nAddress: " + adress ;
+
+let feedbackBtn = document.getElementById("feedBtn");
+feedbackBtn.addEventListener("click", function(event){
+let feedback = document.getElementById("feed").value.trim();
+if(!feedback){
+    alert("Please provide your feedback before submitting.");
+    }
+    else{ 
+        alert("Thank you for your feedback! Reditrecting to Home Page.");
+        window.location.href = "index.html"};
+ 
+});
+    </script>
+</body>
+</html>

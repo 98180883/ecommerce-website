@@ -1,0 +1,74 @@
+ /*=================================================
+ contact page style =======================*/
+
+  .contact-page{
+ height : 100vh;
+  background-image: url("contactimg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+    }
+    #nav{
+      position: absolute;
+      top:90%;
+  font-size: 16px;
+  background-color: #BEB3C9;
+  padding: 20px 10px;
+  border-radius: 10px;
+
+} 
+    .contact-box{
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  background: rgb(255, 255, 255);
+  padding:20px 30px;
+  border-radius: 10px;
+}
+#message_send{
+    position: absolute;
+  top: 5%;
+  left: 85%;
+  background: rgb(170, 136, 255);
+  padding: 20px 10px;
+  border-radius: 10px;
+} 
+#contact-message{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: 10px;
+  
+}
+ 
+ /*================= responsive design for contact page ==================*/
+
+
+@media(max-width:600px){
+ 
+  .contact-page{
+ height : 100vh;
+ display:flex;
+flex-direction: column;
+
+ background-image: url("bookpicture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+    }
+  .contact-box{
+    position: static;
+  background-color: rgb(255, 255, 255);
+  padding:20px 30px;
+  border-radius: 5px;
+}
+#message_send{
+    position:static;
+  background-color: rgb(107, 155, 165);
+  padding: 20px 10px;
+  border-radius: 5px;
+  
+} 
+
+}
