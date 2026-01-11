@@ -1,9 +1,11 @@
-# Vanilla JavaScript E-Commerce Website Project
+# Fully functional frontend E-Commerce Website Project 
 
-A frontend e-commerce website built using **HTML, CSS, and Vanilla JavaScript(Main Strength Of The Site)**.  
+A fully functional frontend e-commerce website built using **HTML, CSS, and Vanilla JavaScript(Main Strength Of The Site)**.  
 This project focuses on **core JavaScript logic**, DOM manipulation, and browser storage without using any frameworks.
 
 ---
+#Live Demo 
+https://enggdigital.netlify.app/
 
 ## 🚀 Features
 
@@ -11,7 +13,7 @@ This project focuses on **core JavaScript logic**, DOM manipulation, and browser
 - Cart quantity & total price calculation
 - Search products and scroll to searched product
 - Free delivery indicator based on cart value
-- Product preview page with Add Product option(via URL parameters) 
+- Product preview page with Add Product option 
 - Cart Summary & Checkout page (via URL parameters) 
 - Contact Us page (via URL parameters)
 - Order confirmation page & post order customer feedback
