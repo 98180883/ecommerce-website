@@ -5,6 +5,21 @@ let loggedin = localStorage.getItem("login");
 if (loggedin !== "true") {
   console.log("You are not logged in! please login first for more details click ok");
 }
+/*===auto clear cached data============*/
+const STORAGE_VERSION = "v3";
+const Storage_key = "cart_version";
+function checkStorage (){
+const savedVer = localStorage.getItem(Storage_key);
+if(savedVer !== STORAGE_VERSION){
+console.log("Old storeage detected");
+localStorage.removeItem("products");
+localStorage.removeItem("count");
+localStorage.removeItem("cart_price");
+localStorage.setItem(Storage_key, STORAGE_VERSION);
+}
+}
+checkStorage();
+
 /*===============adding from preview page=================*/
 let params = new URLSearchParams(window.location.search);
 let previewIndex = params.get("id");
@@ -364,4 +379,13 @@ search_btn.addEventListener("click", function () {
   if (!found) {
     result.innerText = "Product not found, please try again";
   }
+});
+
+/*==clear cart button handling==*/
+let clearcartbtn = document.getElementById("clearcart");
+
+clearcartbtn.addEventListener("click", function(){
+if(confirm("Are you sure you want to reset the cart?")){
+  clearCart();
+}
 });

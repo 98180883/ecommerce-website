@@ -50,7 +50,12 @@ background-color:#ffffcc;
 color: #0fac31;
 
 }
+#clearcart:hover{
+  cursor:pointer;
+  background-color:#ff0000;
+  color:#ffffff;
 
+}
 
 
 .search_container{
