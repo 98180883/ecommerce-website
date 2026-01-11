@@ -1,10 +1,4 @@
-/*================first visit check=================*/
-if(!sessionStorage.getItem("firstvisit")){
-localStorage.removeItem("products");
-localStorage.removeItem("count");
-localStorage.removeItem("cart_price");
-sessionStorage.setItem("firstvisit", "true");
-} 
+
 /*=======checking user login status========*/
 
 let loggedin = localStorage.getItem("login");
@@ -22,20 +16,7 @@ let previewIndex = params.get("id");
 let infoText = 
 document.getElementById("info");
 infoText.innerText = "Hope To Get Your Order Soon";
-/*==================================
-====================================*/
-const STORAGE_VERSION = "v2";
-const Storage_key = "cart_version";
-/*================auto-delete crashed data==================================*/
-function checkStorage (){
-const savedVer = localStorage.getItem(Storage_key);
-if(savedVer !== STORAGE_VERSION){
-console.log("Old storeage detected");
-localStorage.clear();
-localStorage.setItem(Storage_key, STORAGE_VERSION);
-}
-}
-checkStorage ();
+//product list
 
 let products = [
 {
