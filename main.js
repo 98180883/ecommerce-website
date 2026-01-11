@@ -1,5 +1,11 @@
-
-//checking user login status
+/*================first visit check=================*/
+if(!sessionStorage.getItem("firstvisit")){
+localStorage.removeItem("products");
+localStorage.removeItem("count");
+localStorage.removeItem("cart_price");
+sessionStorage.setItem("firstvisit", "true");
+} 
+/*=======checking user login status========*/
 
 let loggedin = localStorage.getItem("login");
 if (loggedin !== "true") {
