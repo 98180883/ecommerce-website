@@ -1,106 +1,187 @@
+:root{
+  --bg-main : #023047;
+  --bg-soft: #6d99f1;
+  --primary-colour : #FFB703;
+  --secondary-color : #FB8500;
+ --accent-color: #07601d;
+ --text-color:#f1f1f1;
+--text-dark:#100707;
+ --warning-color: rgb(135, 0, 0);
+ --success-color: rgb(4, 111, 4);
+  --linear-gradient1:linear-gradient(
+    135deg,
+   #5142d5,
+    #b89ae3
+  );
+}
+
+
+
 /*=================================================
 cart page style */
-
+*{
+   margin:0;
+      padding:0;
+}
+ header{
+  padding:30px;
+  text-align: center;
+  font-size: 18px;
+  background-color:#618ce2;
+   color: var(--text-color);
+}
 
      main{
-      display:flex;
-      flex-direction: column;
-    gap:15px;
+      min-height: 100vh;
+      background-color:#bfbbbb4d;
+color:var(--text-dark);
     }
- header{
-       background-color :#106f04;
-        color: #ffff00;
-          padding : 15px;
-            
-     display:flex;
-    justify-content:center;
-      gap:5px;
+    
+.nav{
+  font-size:18px;
+display:flex;
+justify-content:flex-end;
+gap:30px;                      
 }
-      
-                      
+.nav a{
+  color: var(--text-color);      
+}
+.nav a:hover{
+  color: var(--primary-colour);      
+}
+#Delivery{
+  font-size: 24px;
+  padding: 10px;
+  background-color: #618ce2;
+  color:var(--text-color);
+ font-weight: bold;
+ border-radius: 12px;
+}
+.cart{
+  padding:30px;
+font-size:24px;
+  margin: 20px auto ;
+  display:flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  color:var(--text-dark);
+  background:var(--text-color);
+ box-shadow: 0 8px 25px rgba(167, 211, 255, 0.399);
+ gap:20px;
+ width:auto;
+    max-width:360px;
+}
+#proceed{
+width:100%;
+border-radius: 18px;
+background-color: #FB8500;
+}
+#coupon-apply{
+  font-size: 18px;
+  color: var(--bg-main);
+  font-weight: bold;
 
-.navi {
-                               padding:20px;
-                               margin-bottom: 0px;
-                             border-radius:5px;
-                               color:black;
-                                          text-align:center;
-                                       background-color:#4bb7b4;
-                                  
+}
+#proceed:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+#cart_total{
+  font-size: 30px;
+  color:var(--accent-color);
 }
 button {
-   background-color: rgb(226, 237, 227);
-   color:#034723;
-transition:background-color 0.5s;
-  
+font-size: 18px;
+padding:10px;
 }
 button:hover {
-background-color:rgb(5, 134, 55);
 color :rgba(0, 0, 0, 0.769);
 cursor:pointer;
 transition:background-color 0.5s;
 }
- .image{
- height : 100vh;
-  background-image: url("Design.jpeg");
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-    }
-.cart-back{
-    font-weight: bold;
- position: absolute;
- left:40%;
- top:10px; 
-  background: rgb(144, 246, 164);
-  color:black;
-  padding:20px;
-  border-radius: 2px;
-}
+
 #delivery_fee{
   display:flex;
   justify-content: center;
 font-style: italic;
 font-size: 18px;
 }
- 
+
+.cart input{
+  font-size: 18px;
+  padding:5px;
+  border-radius: 12px;
+}
 
 .checkout
 {
   display: none;
-  position: static;
-  background: rgb(140, 221, 144);
- margin-left:3px;
-  padding:10px;
-  border-radius: 10px;
 }
-input , textarea {
-width :50%;
-padding :8px;
-margin-top:6px;
-margin-bottom:12px;
-border: 3px solid #629a76;
-border-radius : 4px;
-}    
+.checkout.open{
 
-input:focus , textarea:focus {
-outline:none;
-border-color :green;
- }
-
- #checkout-message{
   display:flex;
-  font-size:large;
-  font-weight: bolder;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkout .cart{
+  display:none;
+}
+#checkout-form{
+  width:fit-content;
+  padding:60px;
+  margin:30px auto 30px;
+  border-radius:12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#618ce2;
+  gap:10px;
+}
+.checkout h2 {
+  background-color:#618ce2;
+  color: var(--text-dark);
+  
+  padding:10px;
+margin-top:10px;
+}
+.checkout h2 img{
+  background-color: #f1f1f1;
+  border-radius: 50%;
+ width:30px;
+ height:25px;
+ padding:5px;
+ margin: 5px 5px 0 ;
+}
+.checkout input,textarea{
+  font-size:20px;
+  padding:15px;
+  width: fit-content;
+  border-radius:18px;
+
+}
+#checkout-btn{
+width:100%;
+background-color:#FB8500;
+
+}
+
+#security{
+ display:flex;
+ gap:10px;
+ justify-content: center;
+  font-size: 20px;
+ 
+}
+ #checkout-message{
+  font-size:20px;
+  font-weight: bold;
  }
-#info{
-  margin-top:10px;
-  font-size:18px;
-  font-weight:bold;
+footer{
+  padding:20px;
+  font-size: 18px;
   text-align: center;
-  color:black;
-  font-style: italic;
 }
  @media(max-width:600px){
    main{
@@ -160,4 +241,101 @@ transition:background-color 0.5s;
   text-align: center;
   color:black;
   font-style: italic;
+}
+
+/*media*/
+@media (max-width: 768px) {
+
+  header {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  #Delivery {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .cart {
+    width: 90%;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  #cart_total {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #checkout-form {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .checkout input,
+  .checkout textarea {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  #security {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+/*small screen*/
+@media (max-width: 480px) {
+
+  header {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .cart {
+    width: 95%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  #cart_total {
+    font-size: 22px;
+  }
+
+  #checkout-form {
+    padding: 20px;
+  }
+
+  #checkout-message {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #info {
+    font-size: 14px;
+  }
 }

@@ -3,11 +3,12 @@
 const checkout_form = document.getElementById("checkout-form");
 const checkout_response = document.getElementById("checkout-message");
 let proceed_go = document.getElementById("proceed"); 
- 
+ let cart = document.querySelector(".cart");
 if(cart_price!==0){
    proceed_go.style.display = "Inline-block";
 proceed_go.addEventListener("click" , function(){
-document.querySelector(".checkout").style.display = "Inline-block";
+document.querySelector(".checkout").classList.toggle("open");
+cart.style.display="none";
 } )
 checkout_form.addEventListener("submit", function(event){
 const name = document.getElementById("name").value.trim();
@@ -20,13 +21,13 @@ event.preventDefault();// stop reload
 //stop invalid form
 if(!name || !phone || !email || !adress ){
     cart_response.innerText= "Invalid Input";
-     cart_response.style.color = "red";
+     cart_response.style.color = "orange";
     return ;
 }
 //check phone 
 if(phone.length !== 10 || isNaN(phone)){
      checkout_response.innerText= "Invalid phone number";
-      checkout_response.style.color = "red";
+      checkout_response.style.color = "orange";
      return;
 }
  //if everything valid

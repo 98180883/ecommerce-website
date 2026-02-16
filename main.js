@@ -1,5 +1,7 @@
 
-/*=======checking user login status========*/
+
+
+///*=======checking user login status========*/
 
 let loggedin = localStorage.getItem("login");
 if (loggedin !== "true") {
@@ -28,9 +30,7 @@ let previewIndex = params.get("id");
 
 
 //connect to html
-let infoText = 
-document.getElementById("info");
-infoText.innerText = "Hope To Get Your Order Soon";
+
 //product list
 
 let products = [
@@ -41,27 +41,27 @@ stock :5,
 cartQTY :0
 },
 {
-name : "DSA-I",
+name : "python",
 price :100,
 stock :5,
 cartQTY :0
 },
 {
-name : "DSA-II",
+name : "css",
 price :100,
 stock :5,
 cartQTY :0
 }
 ,
 {
-name : "C project-I",
+name : "JavaScript part-I",
 price :100,
 stock :5,
 cartQTY :0
 }
 ,
 {
-name : "C project-II",
+name : "React part-I",
 price :100,
 stock :5,
 cartQTY:0
@@ -129,8 +129,8 @@ let is_empty= true;
 for (let i=0 ; i < products.length ; i++) {
 if (products[i].cartQTY > 0){
 is_empty = false;
-cart_summary.style.color = "green";
-cart_summary.innerText += products[i].name + " :" + products[i].cartQTY + "\n" ;
+
+cart_summary.innerText += "📗"+products[i].name + " :" + products[i].cartQTY + "\n" ;
 }
 }
 if(is_empty){
@@ -145,13 +145,10 @@ const Free_Ship_limit =500;
 let ship_free=document.getElementById("delivery_fee");
 function ship (){
 if(cart_price >= Free_Ship_limit) {
-ship_free.lastChild.nodeValue = "Congrats Enjoy Free Shipping";
-ship_icon.src ="free-ship.jpg";
-ship_free.style.color = "green";
+ship_free.lastChild.nodeValue = "Enjoy Free Shipping";
 }
 else {
-ship_free.innerText = "Add Products of just ₹" + (Free_Ship_limit - cart_price ) + " To get Free Shipping ";
-ship_free.style.color = "black";
+ship_free.innerText = "Add books worth ₹" + (Free_Ship_limit - cart_price ) + " for free ship";
 
 }
 }

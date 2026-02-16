@@ -7,67 +7,72 @@
 }
 
 /* ===== HEADER ===== */
-header h1 {
+header {
   text-align: center;
-  color: rgb(81, 164, 18);
-  background-color: rgb(240, 240, 240);
+  color:white;
+  background-color:rgb(69, 131, 254);
   padding: 15px;
 }
 
 /* ===== NAVIGATION ===== */
-.navi {
+.nav{
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 24px;
+    margin-top: 10px;
+
   padding: 12px;
-  background: #f5f5f5;
 }
-
-
-/* ===== BACKGROUND ===== */
-.preview-image-back {
-  min-height: 100vh;
-  background-image: url("previewimg.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
+.nav a{
+  font-size: 18px;
+  color:#ffffff;
+}
+.nav a:hover{
+color:#eace53;
 }
 
 /* ===== PREVIEW CARD ===== */
 main {
-  background-color: rgba(255, 255, 255, 0.95);
-  width: 90%;
-  max-width: 420px;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+ min-height: 100vh;
+  
 }
 
+.product{
+   max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  padding:20px;
+  margin: 20px auto 20px;
+  background-color: rgb(62, 116, 223);
+  color:#ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 10px rgba(82, 84, 223, 0.876);
+}
+.product img{
+  width:100%;
+  height:auto;
+   text-align: center;
+}
 /* ===== PRODUCT NAME ===== */
 #pname {
-  font-size: 22px;
-  color: rgb(14, 174, 62);
+  font-size: 24px;
+  color: rgb(254, 255, 255);
   margin-bottom: 10px;
 }
 
-/* ===== IMAGE ===== */
-#pimg {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
+
 
 /* ===== FEATURES ===== */
 #pdf_features {
-  text-align: left;
-  font-size: 16px;
-  margin-bottom: 15px;
-  color: rgb(42, 43, 115);
+  font-size: 18px;
+  margin: 10px;
+  color: rgb(2, 2, 19);
   background-color: #eaefea;
   padding: 10px;
   border-radius: 6px;
@@ -81,7 +86,8 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 6px;
-  background-color: #c9ff25;
+  background-color: #8aff84;
+  color:#074305;
   cursor: pointer;
 }
 
@@ -89,10 +95,94 @@ button:hover {
   background-color: rgb(71, 156, 6);
   color: white;
 }
+footer{
+background-color: rgb(56, 152, 255);
+color:#ffffff;
+text-align: center;
+font-size: 18px;
+padding:10px;
+}
 
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
-  main {
+/*media query*/
+@media (max-width: 768px) {
+
+  header {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .nav {
+    gap: 20px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .product {
+    width: 90%;
+    padding: 16px;
+    margin: 15px auto;
+  }
+
+  #pname {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #pdf_features {
+    font-size: 16px;
+    margin: 8px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+  /*small screen*/
+  @media (max-width: 480px) {
+
+  header {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .product {
     width: 95%;
+    border-radius: 14px;
+  }
+
+  #pname {
+    font-size: 20px;
+  }
+
+  #pdf_features {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  footer {
+    font-size: 14px;
   }
 }

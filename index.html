@@ -9,61 +9,64 @@
 </head>
 
 <body>
+        <p id="notice">🚧UI/UX updates in progress . More improvements coming soon.</p>
  <header>
+   
+   <nav class="nav">
+    <a href="index.html">Home</a> 
+    <a href="#p">Products</a>
+   <a href="cartvs.html">Cart</a> 
+    <a href="contactvs.html">Contact Us</a>
+   </nav>
+   <img src = "srikrishna.JPG" alt="Sri Radhe Krishna" width = "200">
 <h1> Welcome to Digital Store </h1>
 </header>
  
-<section class="login-link">
-<strong><a href="login.html">sign-in</a></strong> 
-</section>
- <main> 
-<div class="search_container">
-<input type="text" id="searchbox" placeholder="Search products">
-<button id="searchbtn">Search</button>
-<div id="result"></div>
-</div>
 
+ <main> 
+<section class="login-link">
+<a href="login.html">sign-in</a>
+</section>
+   <section class="search">
+<input type="text" id="searchbox" placeholder="Search products" />
+<button id="searchbtn">
+   <img src="search.png" alt="search"/>
+</button>
+</section>
+<span id="result"></span>
 
 <div class="cart_whole">
+   <img src="cart.svg" alt="your cart"/>
 <span id ="ca_rt">0</span>
- <img src = "cart1.jpg" alt="cart items" width = "100">
  <span id ="cartbox"> Cart Empty </span>
- <br><br><button id="clearcart">Reset Cart</button>
- </div>
-
+<br><button id="clearcart">Reset Cart</button>
+</div>
 <p id="cart_message"> </p>
 
-
-
- <img src = "srikrishna.JPG" alt="Thanks prabhu Hari" width = "200">
-             <section class="top1">
-            <div id ="wel">Let's become a Human under the scared guidance of Sri RadheKrishna</div>
-
+ <section class="cart-part">
    <h2><span id ="cart_total" >0</span></h2>
-   <p id="delivery_fee">
-     <img id="ship-icon" src="free-ship.jpg" width="20" alt="Free Shipping" > 
-      Free ship above 500/-</p>
+   <p id="delivery_fee">Free ship above 500/-</p>
 </section>
 
-<section class="navi">
-    
-         <h2>Navigation</h2>
-           <a href="index.html">Home</a> 
-             <a href="cartvs.html">Cart</a> 
-                <a href="contactvs.html">Contact Us</a>
+<p id="product-heading">Our Digital Products </p>
 
-</section>
 <section class="products">
-      <h3>Products - </h3>
- <article class ="p"><h4>Ocaml Data & Types Codes + Exercises @ 100/-</h4>  
+  
+ <article id="p" class ="p">
+   <img src="books.jpg" width="180" height="160"/> 
+        <h4>Ocaml Data & Types Codes + Exercises @ 100/-</h4>
 <div class="btn" data-index="0">
+   
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
 </div>
+
 <a href="pre.html?id=0">Preview</a>
 </article>
 
- <article class ="p"><h4>Title : DSA part -I @ 100/-</h4>
+ <article class ="p">
+    <img src="py.jpg" width="180" height="160"/> 
+   <h4>Coding In Python -I @ 100/-</h4>
 <div  class="btn" data-index="1">
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
@@ -72,7 +75,9 @@
 </article>
 
   
-          <article class ="p"><h4>Title : DSA part - II @ 100/-</h4>
+          <article class ="p">   
+            <img src="css.jpg" width="180" height="160"/> 
+            <h4>Title : html & css pdf @ 100/-</h4>
 <div class="btn"  data-index="2">
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
@@ -80,7 +85,9 @@
 <a href="pre.html?id=2">Preview</a>
 </article>
     
-       <article class="p"><h4>Title : C++ project part -I @ 100/-</h4> 
+       <article class="p">
+           <img src="js.jpg" width="180" height="160"/> 
+           <h4>Title :JavaScript part-I @ 100/-</h4> 
 <div class="btn"  data-index="3">
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
@@ -88,7 +95,9 @@
 <a href="pre.html?id=3">Preview</a>
 </article>
     
-        <article class="p"><h4>Title : C++ project part -II @ 100/-</h4> 
+        <article class="p">
+          <img src="c++.jpg" width="180" height="160"/> 
+          <h4>Title : C++ project part -II @ 100/-</h4> 
 <div class="btn" data-index="4">
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
@@ -96,7 +105,9 @@
 <a href="pre.html?id=4">Preview</a>
 </article>
     
-               <article class="p"><h4>Title : Digital Electronics part-I @ 100/-</h4> 
+ <article class="p">
+   <img src="digital.jpg" width="180" height="160"/> 
+                   <h4>Title : Digital Electronics part-I @ 100/-</h4> 
 <div class="btn"  data-index="5">
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
@@ -104,21 +115,38 @@
 <a href="pre.html?id=5">Preview</a>
 </article>
             
-               <article class="p"><h4>Title : Digital Electronics -II @ 100/- </h4>
+               <article class="p">
+                     <img src="py.jpg" width="180" height="160"/>
+                  <h4>Title : Digital Electronics -II @ 100/- </h4>
 <div class="btn"  data-index="6" >
 <button class ="p_button">Add To Cart </button>
 <button class ="d_button" >Remove</button>
 </div>
 <a href="pre.html?id=6">Preview</a>
 </article>
-
-       
 </section>          
    </main>
-<p id = "info">Original text </p>
+
+
 
 <footer>
-<p> © 2026 Digital Store </p>
+   
+   <span id = "info">Policies : Returns Policy | Terms of use | Security | Privacy© 2026 </span>
+
+<div class="connect">
+ 
+     <p id="social-links">Connect With Us on Social Media
+ <a href="https://www.facebook.com/DKARMAKA">   
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" alt="facebook" width="24" height="24"/>
+</a>   
+ <a href="https://www.linkedin.com/in/dipanjan-karmakar-720b54321">   
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="linkedin" width="24" height="24"/>        
+</a> 
+ <a href="https://github.com/98180883">   
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="github" width="24" height="24" />
+</a>
+</p>
+</div>
 </footer> 
 <script src= "main.js" > </script>
 <script src= "cart-validation.js" ></script>

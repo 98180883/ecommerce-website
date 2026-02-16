@@ -1,29 +1,73 @@
+:root{
+  --bg-main : #023047;
+  --bg-soft: #6d99f1;
+  --primary-colour : #FFB703;
+  --secondary-color : #FB8500;
+ --accent-color: #B1740F;
+ --text-color:#f1f1f1;
+--text-dark:#100707;
+ --warning-color: rgb(135, 0, 0);
+ --success-color: rgb(4, 111, 4);
+  --linear-gradient1:linear-gradient(
+    135deg,
+   #5142d5,
+    #b89ae3
+  );
+}
+
+
+
+
+
 /*==========================
 Main page style */     
       
-      body{
-          font-family:Arial , sans-serif;
-               background-color:white;
-              
-           }     
+*{
+  padding: 0;
+  margin: 0;
+}
+    html,body{
+min-height: 100vh;
+ font-family:Arial , sans-serif;
+background-color:var(--bg-main);
+ scroll-behavior: smooth;          
+            
+           }  
+  #notice{
+    text-align: center;
+    font-size:18px;
+    background-color: #f1f1f1;
+    color:#d60000;
+ }   
       header{
-      background-image: url("header.png");
-     background-position-y: center;
-      background-position: relative;
-        color: #ffffff;
-          padding : 15px;
-        
-                   display:flex;
-                        justify-content:center;
-                               gap:18px;
+    background: var(--linear-gradient1);
+        color:var(--primary-colour);
+        padding:10px;
+             text-align: center;
+}
+
+header img{
+max-width:50px;
+height:40;
+border-radius: 50%;
 }
 
        main {
                     text-align:center;
-                    padding :10px;
-                  background-color:#ffffcc;
-                  color:black;
+                 
+                  background-color:var(--bg-main);
+                  color:var(--text-color);
                       
+}
+.login-link{
+  text-align: right;
+  padding:10px;
+}
+.login-link a{
+  color:var(--text-color);
+  font-size:18px;
+  font-weight:bold;
+ 
 }
 #cart_message{
 font-size:18px;
@@ -31,8 +75,6 @@ text-align:center;
 margin-top:5px;
 }
 .cart_whole{
-background-color: #ffffcc;
-
 display:flex;
 font-size:20px;
 flex-direction:column;
@@ -40,138 +82,156 @@ align-items : flex-end;
 margin-top : 5px;
 
  }
+ .cart_whole img{
+width:80px;
+height:60px;
+ }
 #ca_rt{
-color: rgb(9, 127, 9) ;
+color: var(--text-color);
 }
 #cartbox{
-  display:none;
-border :0.2px solid #0f467d;
-background-color:#ffffcc;
-color: #0fac31;
+display:none;
 
 }
 #clearcart:hover{
   cursor:pointer;
-  background-color:#ff0000;
-  color:#ffffff;
+  background-color:var(--warning-color);
+  color:var(--text-color);
 
 }
 
-
-.search_container{
+.search {
   display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
- gap:5px;
+  justify-content: center;
+  margin:10px;
 }
-#searchbox{
-  margin-top:5px;
-padding:10px;
-width:220px;
-font-size:16px;
-color : rgb(0, 1, 0);
-}
-#searchbtn{
- 
-color:rgb(22, 1, 1);
-background-color:#edf0ed;
-padding:0px 2px;
-}
-.search-item{
+.search input{
   font-weight: bold;
-  font-size:larger;
-  font-style: italic;
-padding: 8px;
-margin-top: 6px;
-background-color:#52f83c;
-color:#120215;
-border-radius:4px;
-cursor:pointer;
+}
+#searchbox {
+font-size:24px;
+color :var(--text-dark);
+border-radius:16px;
+padding:8px;
+box-shadow: 0 8px 10px rgba(194, 228, 189, 0.179);
+}
+
+#searchbtn{
+  border-radius: 40px;
+}
+#searchbtn img{
+width:40px;
+height:35px;
 }
 #result{
-color:rgb(180, 7, 7);
-font-size:18px;
-}
-.login-link{
-  text-align: right;
-  color:#0000ff;
-  font-size:30px;
-  font-weight:bold;
-  text-decoration:underline;
-}
-#wel {
-                                               font-size:40px;
-                                                   color:#11aa00;
-   }
-.top1 {
-                                               font-size:20px;
-                                                         text-align:center;
-
-                                                      
-                                                                        
+color:var(--secondary-color);
+font-size:24px;
 }
 
-.navi {
-                               padding:20px;
-                       margin-bottom: 20px;
-                             border-radius:5px;
-                               color:black;
-                                          text-align:center;
 
-                                  
+.cart-part{
+ display:flex;
+ flex-direction: column;
+ align-items: flex-end;
+ gap:10px;
+ font-size: 10px;  
+ margin:10px;      
 }
-#delivery_fee{
-   display:flex;
-  justify-content:center;
-font-style: italic;
-font-size: 18px;
+#cart_total,#delivery_fee{
+  color:var(--primary-colour);
+  font-size: 18px;
 }
+.nav{
+    display:flex;
+justify-content: flex-end;
+  gap:20px;
+  }
+  .nav a{
+    color:var(--text-color);
+    font-size: 18px;
+  }
+  .nav a:hover{
+    color:var(--primary-color);
+  }
+ 
+#product-heading{
+
+  background-color: var(--bg-soft);
+  font-size: 30px;
+  padding:20px;
+  margin: 30px auto 30px;
+
+ }
+
 .products {
-              color:black;
-               border-radius:5px;
-                                display:flex;
-                                      gap:10px;
-                                          flex-wrap:wrap;
-                                              justify-content:center;
-                                                      
-                                 
+  border-radius:5px;
+ display:flex;
+ gap:10px;
+justify-content:center;
+ flex-wrap:wrap;
+    gap:100px;
+                             
 }
 .p{
-padding:20px;
-border :3px solid #ccc;
-background-color: greenyellow;
-color:#120215;
- 
-width : 220px ;
+padding:30px;
+font-size: 24px;
+background:var(--linear-gradient1);
+color:var(--text-color);
+width:auto;
+max-width : 220px ;
+border-radius: 30px;    
+}
+
+.p a{
+  font-size: 18px;
+  color:var(--bg-main);
+}
+.img-wrapper{
+    position: relative;
+    width: 100%;
+    height:130px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
 
 button {
-   background-color: white;
-   color:#aa00ff;
-transition:background-color 0.5s;
-  
-}
-.p_button , .d_button{
-  padding:6px 10px;
-  margin-top:6px;
+  color:var(--text-dark);
+  border-radius: 12px;
+  font-size: 18px;
+  padding:8px 10px;
+  margin:8px;
 }
 
+
+
 .p_button:hover {
-background-color:green;
-color :black;
+background-color:var(--secondary-color);
 cursor:pointer;
+transform: translateY(4px)  scale(1.03);
 }
 .d_button:hover {
 background-color:red;
-color :black;
+transform: translateY(4px)  scale(1.03);
 cursor:pointer;
 }
-#searchbtn:hover{
-  cursor:pointer;
-  color:#000000;
-  background-color:#0fac31
+
+footer{
+  margin-top:20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-soft);
+  color:var(--text-color);
+  gap:30px;
+  font-size: 20px;
+}
+
+#social-links {
+  color:var(--text-dark);
+  display:flex;
+  gap:40px;
 }
 /*css reacting to js */
 
@@ -190,54 +250,34 @@ cursor :not-allowed;
   color:black;
   font-style: italic;
 }
-/*==========================================================================
-====================media-query============================================*/
+ /*media query */
+ @media (max-width: 480px) {
 
-@media(max-width:600px){
-header{
-  background-image:url("header.png");
-     background-position-y: center;
-     
-        color: #ffffff;
-          padding : 4px;
-        font-size:small;
-                   display:flex;
-                        justify-content:center;
-                               
-  
-}
+  header img {
+    max-width: 40px;
+    height: 40px;
+  }
 
-       main {
+  #product-heading {
+    font-size: 22px;
+    padding: 15px;
+  }
 
-                    text-align:center;
-                    padding :20px;
-                  background-color:#ffffcc;
-                  color:black;
-                      
-}
-#wel {
-                                               font-size:14px;
-                                                   color:#11aa00;
-   }
-   #searchbox{
- width :90%;
-}
-.cart_whole{
-  background-color:#ffffcc ;
-  align-items:flex-end;
-  width:"50";
-}
-.p{
-  width:90%;
-}
-.search-item{
-font-size:14px;
-}
+  .p {
+    font-size: 18px;
+    border-radius: 20px;
+  }
 
-.login-link{
-  text-align: right;
-  color:#0000ff;
-  font-size:14px;
-  font-weight:bold;
-  text-decoration:underline;
-}}
+  #searchbox {
+    font-size: 16px;
+    padding: 6px;
+  }
+
+  #cart_message {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}

@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset = "UTF-8">
+   <meta name ="viewport"
+   content="width=device-width, initial-scale =1.0" >
   <title>Preview</title>
 <link rel="stylesheet" href="preview.css">
 </head>
 <body>
     <header>
         <h1>Preview page</h1>
+          <nav class="nav">
+ <a href="index.html">Home</a> 
+<a href="cartvs.html">Cart</a>
+<a href="contactvs.html">Contact</a>
+</nav>
+
         </header>
-        <section class="navi">
- <a href="index.html">Go To Home</a> 
-<a href="cartvs.html">Go To Your Cart</a>
-
-</section>
-    <div class="preview-image-back">
 <main>
-<h2><span id ="pname"></span></h2>
-<img id ="pimg" src = "ocaml.jpg" alt = "ocaml pdf" >
-<p id = "pdf_features"> </p>
+<div class="product">
+<span id ="pname">  </span>
+<img id ="pimg" src = "ocaml.jpg" alt = "ocaml pdf"/>
+<p id = "pdf_features"></p>
 <button id ="Add">ADD NOW </button>
-</main>
-
 </div>
-
+</main>
+<footer>
+<p id="security">
+  
+  <span>Policies : Returns Policy | Terms of use | Security | Privacy© 2026 </span>
+  </p>
+</footer> 
 <script src="preview.js"></script>
 </body>
 </html>
