@@ -142,7 +142,7 @@ cursor:pointer;
   align-items: flex-start;
   gap:5px;
   letter-spacing: 1px;
-  background-image: url('books-bg.png');
+  background-image: url('books-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
