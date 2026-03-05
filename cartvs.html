@@ -9,36 +9,33 @@
 </head>
 <body>
   <header>
-     <nav class="nav">
-  
-            <a href="index.html">Home</a> 
-              <a href="cartvs.html">Cart</a> 
-                  <a href="contactvs.html">Contact Us</a>
-</nav>
+     
  <h1>Your Cart</h1>
-
+ 
+<nav class="nav">
+<a href="index.html">Home</a> 
+<a href="cartvs.html">Cart</a> 
+<a href="contactvs.html">Contact Us</a>
+</nav>
 </header>
 
 <main>
-
-
+  <p id="checkout-message"> </p>
 <div class = "cart">  
-  <span id="Delivery"><img src="trust.png" width="45" height="30"/>Delivery Within 3-5 days</span>
-<span id ="cartbox">Cart Empty </span> 
-<p id="ca_rt">Total no of items: 0</p>
+  <p id="Delivery"><img src="trust.png" width="45" height="30"/>Delivery Within 3-5 days</p>
+<p id ="cartbox">Cart Empty</p> 
+<p id="cart-count">No of items: 0</p>
 <p id="cart_total">Cart Total: ₹0</p>
 
 <p id="delivery_fee">
-      <img src="ship-free.png"/> Free ship above 500/-
-  </p>
-  <p>
-   
-      <img src="coupon.png" width="40" height="30"/> 
-    
-   <input id="coupon" placeholder="Enter Coupon code"></input>
-   <span id="coupon-apply">Apply</span>
+<img id='ship-icon' src="ship-free.png" alt="ship-free "> Free ship above 500/-
+</p>
+  <p class="coupon-part">
   
-    </p>
+   
+<input id="coupon" placeholder="Enter Coupon code" />
+<span id="coupon-apply">Apply</span>
+</p>
   <button id="proceed">Proceed To Buy</button>
 </div>
 
@@ -46,30 +43,25 @@
 
 <div class = "checkout">
   
-<h2><img src="write.png"/>Fill The Checkout Form To Order</h2>
+<h2>Fill The Checkout Form To Order</h2>
         <form id="checkout-form">
         <input type ="text" id="name" name="name" placeholder="Enter name" required>
         <input type ="email" id="email" name="email" placeholder="Enter Email-Id" >
         <input type ="tel" id="phone" name="phone" placeholder="Enter phone" required>
         <textarea id="adress" name="Adress" placeholder="Enter delivery adress" rows="3">
 </textarea>    
-   <button id="checkout-btn" type="submit">Place Order</button>
-  <p id="checkout-message"> </p> 
+   <button id="checkout-btn" type="submit">Place Order</button> 
   </form>
 
   </div>
+
 <p id="security">
-<img src="security.png" width="30" height="25"/>
-<span>Safe & Secure Payment Easy Returns and 100% 
-  authentic products
-  </span>
+<img src="security.png" alt="security img"/>
+<span>Safe & Secure Payment Easy Returns and 100% authentic products</span>
 </p>
 </main>
 <footer>
-<p id="security">
-  
-  <span>Policies : Returns Policy | Terms of use | Security | Privacy© 2026 </span>
-  </p>
+ <span>Policies : Returns Policy | Terms of use | Security | Privacy© 2026 </span>
 </footer> 
 
 <script src= "main.js" ></script>

@@ -42,6 +42,7 @@ background-color: #f5ecec;
 }
     .contact-box{
  display:flex;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
  flex-wrap: wrap;
@@ -120,31 +121,178 @@ color:rgb(198, 0, 109);
  /*================= responsive design for contact page ==================*/
 
 
-/*@media(max-width:600px){
- 
-  .contact-page{
- height : 100vh;
- display:flex;
-flex-direction: column;
+ /*=================================================
+ contact page style =======================*/
 
- background-image: url("bookpicture.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-    }
-  .contact-box{
-    position: static;
-  background-color: rgb(255, 255, 255);
-  padding:20px 30px;
-  border-radius: 5px;
+ *{
+  margin:0;
+  padding:0;
+ }
+ header{
+  background-color: rgb(94, 146, 251);
+  color:white;
+  font-size:24px;
+  text-align: center;
+  min-height: 20%;
+  margin-bottom:10px;
+  padding:10px;
+ }
+ #nav{
+  margin: 10px auto 10px;
+ }
+ #nav a{
+  color:#ffffff;
+  font-size: 18px;
+ }
+  #nav a:hover{
+  color:#f5d65c;
+ }
+
+main{
+  min-height: 100vh;
+background-color: #f5ecec;
 }
-#message_send{
-    position:static;
-  background-color: rgb(107, 155, 165);
-  padding: 20px 10px;
-  border-radius: 5px;
-  
-} 
+.contact-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+}
+.contact-page h2{
+  font-size: 30px;
+  animation: coloralter 10s ease-in-out infinite;
+}
+    .contact-box{
+       background-color: rgb(127, 172, 255);
+ color: #ffffff;
+ display:flex;
+ justify-content: flex-start;
+ flex-wrap: wrap;
+ font-size: 24px;
+ font-weight: bold;
+ gap:10px;
+ margin:10px auto 10px;
+ padding:20px;
 
-}*/
+ border-radius:18px;
+}
+
+#message_send{
+    display:flex;
+    flex-direction: column;
+    background-color:  rgb(127, 172, 255);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    font-size:30px ;
+    border-radius: 18px;
+    gap:10px;
+} 
+#contact-form{
+  padding-top: 10px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+#contact-form input,textarea{
+  max-width:80%;
+  font-size: 24px;
+  border-radius:18px;
+  padding:10px;
+  
+}
+ #contact-form input:focus{
+   outline: 2px solid #08c50e;
+ }
+#contact-message{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: 10px;
+}
+ button{
+  width:100%;
+  font-size: 20px;
+  border-radius:12px;
+  background-color: rgb(231, 94, 9);
+  color:#ffffff;
+  padding:10px;
+ }
+ button:hover{
+  background-color: rgb(236, 77, 20);
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+ @keyframes coloralter{
+  0%{
+    color:rgb(4, 17, 140);
+  }
+  50%{
+    color:rgb(3, 151, 8);
+  }
+ 
+ 100%{
+color:rgb(198, 0, 109);
+ }
+}
+ /*================= responsive design for contact page ==================*/
+
+
+/* ===============================
+   Responsive Design (720px)
+=================================*/
+@media (max-width: 720px) {
+
+  header {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  #nav a {
+    font-size: 16px;
+  }
+
+  .contact-page {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .contact-page h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .contact-box {
+    font-size: 16px;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  #message_send {
+    width: 90%;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  #contact-message {
+    font-size: 14px;
+    text-align: center;
+  }
+}

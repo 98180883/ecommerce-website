@@ -9,122 +9,159 @@
 </head>
 
 <body>
-        <p id="notice">🚧UI/UX updates in progress . More improvements coming soon.</p>
  <header>
-   
-   <nav class="nav">
-    <a href="index.html">Home</a> 
-    <a href="#p">Products</a>
-   <a href="cartvs.html">Cart</a> 
-    <a href="contactvs.html">Contact Us</a>
-   </nav>
-   <img src = "srikrishna.JPG" alt="Sri Radhe Krishna" width = "200">
-<h1> Welcome to Digital Store </h1>
-</header>
- 
-
- <main> 
-<section class="login-link">
-<a href="login.html">sign-in</a>
-</section>
-   <section class="search">
+  <p id="store-title">Digital Store</p> 
+  
+  <section class="search">
 <input type="text" id="searchbox" placeholder="Search products" />
 <button id="searchbtn">
    <img src="search.png" alt="search"/>
 </button>
 </section>
-<span id="result"></span>
+<div class="user-actions">
+<section class="login-link">
+    <a href="login.html"><img src="login.png"  alt="login"></a> 
 
-<div class="cart_whole">
-   <img src="cart.svg" alt="your cart"/>
-<span id ="ca_rt">0</span>
- <span id ="cartbox"> Cart Empty </span>
-<br><button id="clearcart">Reset Cart</button>
-</div>
-<p id="cart_message"> </p>
-
- <section class="cart-part">
-   <h2><span id ="cart_total" >0</span></h2>
-   <p id="delivery_fee">Free ship above 500/-</p>
 </section>
+  
+<section class="cart_whole">
+ <a href="cartvs.html"><img src="cart.png" alt="your cart"></a>
+       <p id="cart-count"></p>
+</section>
+ <button id="menu-btn">☰</button> 
+</div>
+  
+</header>
 
+ <main> 
+   <p id="result"></p>
+    <nav class="nav">
+    <a href="index.html">Home</a> 
+    <a href="#p">Products</a>
+   <a href="cartvs.html">Cart</a> 
+    <a href="contactvs.html">Contact Us</a>
+   </nav>
+ 
+  <nav class="mob-nav">
+       <a href="index.html">Home</a> 
+    <a href="#p">Products</a>
+   <a href="cartvs.html">Go to Cart</a> 
+    <a href="contactvs.html">Contact Us</a>
+   </nav>
+
+    <article class="middle-container">
+      <span>Today's reader Tomorrow's leader</span>
+   <p>There is nothing </p>
+     <p>Better than to read </p>
+</article>
+<p id="offers-heading">Hot Offers</p>
+<article class="offers-container">
+     <img src="offer2.png">
+   <img src="offer3.png" >
+    
+      
+   </article>
 <p id="product-heading">Our Digital Products </p>
 
-<section class="products">
+
   
+              <div class="slider">
+              
+            <button id="L-slideBtn">❮</button>
+               <section class="products">
  <article id="p" class ="p">
-   <img src="books.jpg" width="180" height="160"/> 
-        <h4>Ocaml Data & Types Codes + Exercises @ 100/-</h4>
+   <img src="card1.png"> 
+        <h4>Ocaml Data & Types</h4>
+        
+        <p class="price">₹100</p>
 <div class="btn" data-index="0">
    
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 
 <a href="pre.html?id=0">Preview</a>
 </article>
 
  <article class ="p">
-    <img src="py.jpg" width="180" height="160"/> 
-   <h4>Coding In Python -I @ 100/-</h4>
+    <img src="card2.png"> 
+   <h4>Coding in python -I</h4>
+ 
+       <p class="price">₹100</p>
 <div  class="btn" data-index="1">
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=1">Preview</a>
 </article>
 
   
           <article class ="p">   
-            <img src="css.jpg" width="180" height="160"/> 
-            <h4>Title : html & css pdf @ 100/-</h4>
+           <img src="card3.png"> 
+          <h4>Html & css pdf</h4>
+            
+                <p class="price">₹100</p>
+               
 <div class="btn"  data-index="2">
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=2">Preview</a>
 </article>
     
        <article class="p">
-           <img src="js.jpg" width="180" height="160"/> 
-           <h4>Title :JavaScript part-I @ 100/-</h4> 
+           <img src="card4.png"> 
+
+           <h4>JavaScript part-I</h4>
+           
+               <p class="price">₹100</p> 
 <div class="btn"  data-index="3">
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=3">Preview</a>
 </article>
     
         <article class="p">
-          <img src="c++.jpg" width="180" height="160"/> 
-          <h4>Title : C++ project part -II @ 100/-</h4> 
+             <img src="card5.png"> 
+
+          <h4>C++ project part -II</h4>
+         
+            </p>
+              <p class="price">₹100</p> 
 <div class="btn" data-index="4">
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=4">Preview</a>
 </article>
     
  <article class="p">
-   <img src="digital.jpg" width="180" height="160"/> 
-                   <h4>Title : Digital Electronics part-I @ 100/-</h4> 
+       <img src="card6.png"> 
+
+                   <h4>Digital Electronics -I</h4>
+                       <p class="price">₹100</p> 
 <div class="btn"  data-index="5">
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=5">Preview</a>
 </article>
             
                <article class="p">
-                     <img src="py.jpg" width="180" height="160"/>
-                  <h4>Title : Digital Electronics -II @ 100/- </h4>
+                       <img src="card7.png"> 
+
+                  <h4>Digital Electronics -II</h4>
+                      <p class="price">₹100</p>
 <div class="btn"  data-index="6" >
-<button class ="p_button">Add To Cart </button>
-<button class ="d_button" >Remove</button>
+<button class ="p_button">+</button>
+<button class ="d_button" >-</button>
 </div>
 <a href="pre.html?id=6">Preview</a>
 </article>
-</section>          
+ <button id="R-slideBtn">❯</button>
+ </div>
+</section>     
    </main>
 
 
@@ -148,9 +185,12 @@
 </p>
 </div>
 </footer> 
-<script src= "main.js" > </script>
-<script src= "cart-validation.js" ></script>
 
+<script src= "main.js"></script>
+<script src="cart-validation.js"></script>
+<script src= "search.js"></script>
+<script src= "hamberger.js"></script>
+<script src= "slide.js"></script>
 </body>
 </html>
 

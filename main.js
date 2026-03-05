@@ -47,7 +47,7 @@ stock :5,
 cartQTY :0
 },
 {
-name : "css",
+name : "HTMl & CSS",
 price :100,
 stock :5,
 cartQTY :0
@@ -61,7 +61,7 @@ cartQTY :0
 }
 ,
 {
-name : "React part-I",
+name : "C++ Project part-I",
 price :100,
 stock :5,
 cartQTY:0
@@ -81,13 +81,33 @@ cartQTY :0
 ];
 let index=0;
 let ship_icon = document.getElementById("ship-icon");
-let cart_count = document.getElementById("ca_rt");
+let cart_count = document.getElementById("cart-count");
 let count=0;
 
 let cart_feedback = document.getElementById("cart_message");
 
 let cart_pricebox = document.getElementById("cart_total");
 let cart_price =0;
+
+
+
+/*UI defensive update*/ 
+function updateCartSummaryUI() {
+  if (cart_count) {
+    cart_count.innerText = "Items: "+count;
+  }
+
+  if (cart_pricebox) {
+    cart_pricebox.innerText = "Cart Total: ₹ " + cart_price;
+  }
+}
+
+function updateFeedback(message, color) {
+  if (cart_feedback) {
+    cart_feedback.innerText = message;
+    cart_feedback.style.color = color;
+  }
+}
 
 
 //Local Storage setting
@@ -116,41 +136,10 @@ cart_price= Number(saved_price);
 
 //timeout
 function timeout() {setTimeout(function(){
-cart_feedback.innerText = ""
+if (cart_feedback) {
+  cart_feedback.innerText = "";
+}
 }, 5000);
-}
-
-//cart summary 
-let cart_summary = document.getElementById("cartbox");
-function summary(){
-cart_summary.innerText=" ";
-let is_empty= true;
-
-for (let i=0 ; i < products.length ; i++) {
-if (products[i].cartQTY > 0){
-is_empty = false;
-
-cart_summary.innerText += "📗"+products[i].name + " :" + products[i].cartQTY + "\n" ;
-}
-}
-if(is_empty){
-cart_summary.style.color = "red";
-cart_summary.innerText="Empty  cart ";
-}
-}
-
-//delivery free or not
-
-const Free_Ship_limit =500;
-let ship_free=document.getElementById("delivery_fee");
-function ship (){
-if(cart_price >= Free_Ship_limit) {
-ship_free.lastChild.nodeValue = "Enjoy Free Shipping";
-}
-else {
-ship_free.innerText = "Add books worth ₹" + (Free_Ship_limit - cart_price ) + " for free ship";
-
-}
 }
 
 
@@ -160,30 +149,25 @@ ship_free.innerText = "Add books worth ₹" + (Free_Ship_limit - cart_price ) + 
 function updateUIAdd(parent,index){
 let addBtn = parent.querySelector(".p_button");
 
- cart_count.innerText="Total no of items: " +count;
-cart_pricebox.innerText =  "Cart Total: ₹ " + cart_price;
-addBtn.innerText = "Add To Cart \n" + products[index].cartQTY ;
-
- cart_feedback.innerText = products[index].name+ " added " +  products[index].cartQTY;
- cart_feedback.style.color= "green" ;
-ship();
- summary();
+updateCartSummaryUI();
+updateFeedback(products[index].name + " added " + products[index].cartQTY, "green");
 }
 
 function updateUIDel(parent , index){
 let delBtn = parent.querySelector(".d_button");
 let addBtn = parent.querySelector(".p_button");
 
-delBtn.innerText = "Remove \n-";
-addBtn.innerText = "Added " + products[index].cartQTY +"\n+" ;
+delBtn.innerText = "-";
+addBtn.innerText = "+" + products[index].cartQTY;
 
- cart_count.innerText="Total no of items: "+count;
-cart_pricebox.innerText ="Cart Total: ₹ " + cart_price;
- cart_feedback.innerText = products[index].name+ " removed \n No of : " + products[index].name + " in your cart " + products[index].cartQTY;
-cart_feedback.style.color= "red" ;
+ updateCartSummaryUI();
 
-ship();
-summary();
+updateFeedback(
+  products[index].name + " removed. No of " +
+  products[index].name + " in cart: " +
+  products[index].cartQTY,
+  "red"
+);
 }
 /*=============button sync=================*/
 function syncButtons(parent , index ){
@@ -192,13 +176,13 @@ let delBtn = parent.querySelector(".d_button");
 
 if (products[index].cartQTY === 0){
 addBtn.style.display= "inline-block";
-addBtn.innerText = "Add To Cart" ;
+addBtn.innerText = "+" ;
 delBtn.style.display= "none";
 
 } 
 else if(products[index].cartQTY < products[index].stock) {
 addBtn.style.display= "inline-block";
-addBtn.innerText = "Added" + products[index].cartQTY +"\n+";
+addBtn.innerText = "+" + products[index].cartQTY;
 delBtn.style.display= "inline-block";
 }
 else {
@@ -209,10 +193,8 @@ delBtn.style.display= "Inline-block";
 /*==============================reload if user refresh page=============*/
 function reload(){
  loadlocal();
-cart_count.innerText ="Total no of items: " + count;
- cart_pricebox.innerText ="Cart Total: ₹ " + cart_price;
- summary();
- ship();
+updateCartSummaryUI();
+
 let productsDivs = document.querySelectorAll(".btn"); // parent div
 productsDivs.forEach(div => {
   let index = Number(div.getAttribute("data-index"));
@@ -234,7 +216,7 @@ localStorage.removeItem("cart_price");
 reload();
 }
 
-/*add functions*/
+/*==============add functions================*/
 function addToCartByIndex(index) {
   if (products[index].cartQTY < products[index].stock) {
     products[index].cartQTY++;
@@ -250,7 +232,7 @@ addToCartByIndex(index);
 updateUIAdd(parent, index);
 }
 
-/*delete functions*/
+/*================delete functions================*/
 function deleteCartByIndex(index){
 if(products[index].cartQTY > 0 && count>0 && cart_price >= products[index].price){
 products[index].cartQTY-=1;
@@ -293,8 +275,6 @@ timeout();
 
 else{
 syncButtons(proNear , index );
-ad_button.innerText ="Added: " + products[index].cartQTY + "\n Max Quantity Reached"; 
-cart_feedback.innerText =products[index].name+ " Not available more"; 
 timeout();
 }
 
@@ -328,61 +308,4 @@ timeout();
 
 });
 
-});
-let searchbox = document.getElementById("searchbox");
-let search_btn = document.getElementById("searchbtn");
-let result = document.getElementById("result");
-
-search_btn.addEventListener("click", function () {
-  let searchvalue = searchbox.value.trim().toLowerCase();
-  result.innerHTML = "";
-
-  if (searchvalue === "") {
-    result.innerText = "Please enter a product name";
-    return;
-  }
-
-  let found = false;
-
-  products.forEach(function(product, index) {
-    if (product.name.toLowerCase().includes(searchvalue)) {
-
-      let item = document.createElement("div");
-      item.className = "search-item";
-      item.innerText = "🎉 Product found: " + product.name + " @ ₹" + product.price;
-
-      /*===scroll to product on click====*/
-      item.addEventListener("click", function () {
-        let productDiv = document.querySelector(
-          `.btn[data-index="${index}"]`
-        );
-
-        if (productDiv) {
-          productDiv.scrollIntoView({ behavior: "smooth", block: "center" });
-          productDiv.style.border = "4px solid green";
-
-          setTimeout(() => {
-            productDiv.style.border = "";
-          }, 3000);
-        }
-      });
-/*================================*/
-
-      result.appendChild(item);
-      found = true;
-    }
-  });
-
-  if (!found) {
-    result.innerText = "Product not found, please try again";
-  }
-});
-
-/*==clear cart button handling==*/
-let clearcartbtn = document.getElementById("clearcart");
-
-clearcartbtn.addEventListener("click", function(){
-if(confirm("Are you sure you want to reset the cart?")){
-  clearCart();
-}
 });
