@@ -1,19 +1,11 @@
 
 :root{
-  --bg-main : #023047;
-  --bg-soft: #6d99f1;
-  --primary-colour : #FFB703;
+  --bg-main:#bfbbbb4d;
+  --bg-all:#618ce2;
   --secondary-color : #FB8500;
  --accent-color: #07601d;
  --text-color:#f1f1f1;
---text-dark:#100707;
- --warning-color: rgb(135, 0, 0);
- --success-color: rgb(4, 111, 4);
-  --linear-gradient1:linear-gradient(
-    135deg,
-   #5142d5,
-    #b89ae3
-  );
+
 }
 
 
@@ -31,19 +23,19 @@ cart page style */
   align-items: center;
   padding:30px;
   font-size: 18px;
-  background-color:#618ce2;
+  background-color:var(--bg-all);
    color: var(--text-color);
 }
 
      main{
       min-height: 100vh;
-      background-color:#bfbbbb4d;
+      background-color:var(--bg-main);
 color:var(--text-dark);
     }
     #checkout-message{
       text-align: center;
-      font-size:24px;
-   font-weight: bold;
+      font-size:18px;
+   
       margin:10px;
     }
 .nav{
@@ -56,15 +48,16 @@ justify-content:center;
 gap:20px;                      
 }
 .nav a{
+  text-decoration: none;
   color: var(--text-color);      
 }
 .nav a:hover{
-  color: var(--primary-colour);      
+  color: var(--secondary-color);      
 }
 #Delivery{
   font-size: 24px;
   padding: 10px;
-  background-color: #618ce2;
+  background-color:var(--bg-all);
   color:var(--text-color);
  font-weight: bold;
  border-radius: 12px;
@@ -92,11 +85,12 @@ font-size:24px;
 #proceed{
 width:100%;
 border-radius: 18px;
-background-color: #FB8500;
+background-color:var(--secondary-color);
 }
 #coupon-apply{
   font-size: 18px;
-  color: var(--bg-main);
+  background-color: var(--bg-all);
+  color: var(--text-dark);
   font-weight: bold;
 
 }
@@ -142,10 +136,10 @@ font-size:16px;
   font-size: 20px;
 }
 #coupon-apply{
-  background-color: var(--bg-soft);
+  background-color: var(--bg-all);
   color:var(--text-color);
-  font-size: 20px;
-  padding: 5px;
+  font-size:20px;
+  padding: 6px;
   border-radius:8px;
 }
 .checkout
@@ -171,7 +165,7 @@ font-size:16px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color:#618ce2;
+  background-color:var(--bg-all);
   gap:10px;
 }
 .checkout h2 {
@@ -196,7 +190,7 @@ margin-top:10px;
 }
 #checkout-btn{
 width:100%;
-background-color:#FB8500;
+background-color:var(--secondary-color)
 
 }
 
@@ -225,7 +219,7 @@ footer{
     text-align: center;
   }
 header h1{
-  font-size:30px;
+  font-size:28px;
 }
   .nav {
     position: static;     

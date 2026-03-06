@@ -142,7 +142,9 @@ cursor:pointer;
   align-items: flex-start;
   gap:5px;
   letter-spacing: 1px;
-  background-image: url('books-bg.webp');
+  background: 
+linear-gradient(rgba(0,0,0,0.05),rgba(0, 0, 0, 0.05)),
+url(books-bg.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,7 +223,7 @@ overflow-y: hidden;
 scroll-behavior: smooth;  
 }
 .products::-webkit-scrollbar {
-  display: none !important;;
+  display: none;
 }
 .slider {
   position: relative;
@@ -345,7 +347,7 @@ cursor :not-allowed;
   font-style: italic;
 }
  /* Media Query for mobile */
-@media (max-width:720px) {
+@media (max-width:1050px) {
   header {
  margin:10px auto;
     gap: 10px;
@@ -389,30 +391,42 @@ gap:8px;
   #menu-btn{
      display: block;
   margin-left: auto;
-    padding:4px;
-    font-size:12px;
-
+    padding:8px;
+    font-size:16px;
+    position: relative;
+  z-index: 2000;
   }
   .nav {
     display: none;
   }
-  .mob-nav.open{
- margin:10px auto;
-    width:80%;
-    background:var(--bg-soft);
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-     gap:10px;
-    padding: 10px;
-   border-radius: 12px;
+  .mob-nav{
+  position: fixed;
+  top:0;
+ right:-100%;
+  width:70%;
+  max-width:260px;
+  height:100vh;
+  background: var(--card-bg);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  transition:0.3s ease;
+  z-index:1000;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2);
   }
-  .mob-nav.open a {
+  .mob-nav.open{
+    right:0;
     font-size: 16px;
        color: var(--text-color);
   }
-
+.mob-nav a {
+  font-weight: bold;
+  color:var(--text-color);
+  font-size: 16px;
+  text-decoration: none;
+}
 
 .middle-container{
   height:180px;

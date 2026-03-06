@@ -3,7 +3,7 @@
     padding:0;
  }
  header{ 
-                 width:100%;
+               
                 background-color:rgba(220, 249, 216, 0.5);
                 color: #00d219;
                display: flex;
@@ -38,26 +38,34 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                align-items:center;
-                gap:4px;
+        
+                align-items:flex-start;
+                flex-wrap: wrap;
+
                 padding:10px;
+                border-radius: 8px;
                 
             }
             .order-details,.customer-details{
-                width:100%;
-                margin:auto;
+              width: 90%;
+                  max-width:600px;
+                  margin:auto;
                 background-color: #f0f0f0;
                 display: flex;
                 flex-direction: column;
+                justify-content: flex-start;
                 align-items: flex-start;
-                gap:4px;
+                flex-wrap: wrap;
                 padding:10px;
                    font-size: 18px;
+                     border-radius: 8px;
+                
+                  
             }
             #total{
-                margin-top:5px;
+                margin-top:10px;
                 width:100%;
-                text-align: left;
+              text-align: left;
                 color:#00610b;
                 font-size:30px;
                 font-weight: bold;
@@ -74,7 +82,7 @@
                 align-items: center;
 
                 flex-wrap:wrap;
-                   gap:8px;
+                 gap:8px;
                 margin:auto;
                 padding:10px;
                 margin-top:20px;
@@ -82,7 +90,7 @@
               
             }
             button{
-                 background-color:rgb(241, 138, 70);
+                 background-color:rgb(255, 124, 37);
                 color:rgb(253, 253, 253) ;
                 font-size: 16px;
                 padding:10px;
@@ -90,24 +98,50 @@
                 border-radius: 8px;
             }
             button:hover{
-                background-color:rgb(189, 75, 0);
+                background-color:rgb(174, 70, 0);
                
                 cursor:pointer;
             }
             input{
                 width:90%;
-                padding:8px;
+                padding:6px;
                 font-size: 14px;
                 border-radius: 8px;
              color:rgb(1, 0, 0);
                 background-color:rgb(255, 255, 255);
-                font-size: 20px;
+                font-size: 16px;
                 }
             footer{
                 text-align: center;
-                font-size: 18px;
+                font-size: 16px;
                 padding: 10px;
                 background-color:#618ce2;
                 color: rgb(255, 255, 255);
              
+            }
+
+            @media (max-width:900px){
+                header{
+                    font-size: 30px;
+                }
+                  #total{
+                    text-align: center;
+                    font-size: 24px;
+                  }
+                    .order-container{
+                        align-items: center;
+                gap:4px;
+                padding:5px;
+                
+            }
+            .order-details,.customer-details{
+                width:100%;
+            }
+             footer{
+                
+                font-size: 14px;
+                padding: 5px;
+                
+             
+            }
             }

@@ -20,13 +20,13 @@ if(!name || !phone || !email || !adress ){
 //check phone 
 if(phone.length !== 10 || isNaN(phone)){
      contact_response.innerText= "Invalid phone number";
-      contact_response.style.color = "red";
+      contact_response.style.color = "yellow";
      return;
 }
  //if everything valid
   contact_response.innerText= "Message Sent Successfully";
-  contact_response.style.color = "black";
  contact_form.reset();
+ alert(' We will get back to You soon ! You are being redirected to Home Page')
  window.location.href = "index.html";
 
 ;})

@@ -9,7 +9,9 @@ let productQty = Number(localStorage.getItem("productQty"));
 let orderAmount = Number (localStorage.getItem("orderAmount"));
 let customerPh=Number(phone);
 
-document.getElementById("order-id").innerText= "Order ID:   ENGG-pdf-" + new Date().getTime();
+let orderId = document.getElementById("order-id");
+orderId.innerText= "Order ID:   ENGG-pdf-" + new Date().getTime();
+orderId.style.fontWeight='bold';
 document.getElementById("order-qty").innerText=  "No of Items Ordered :    " + productQty;
 document.getElementById("sub-total").innerText=  "Sub Total :    ₹" + orderAmount ; 
 document.getElementById("total").innerText=  "Order Amount :    ₹" + orderAmount ; 
@@ -28,7 +30,7 @@ if(!feedback){
     alert("Please provide your feedback before submitting.");
     }
     else{ 
-        alert("Thank you for your feedback! Reditrecting to Home Page.");
-        window.location.href = "index.html"};
+        alert("Thank you for your feedback! Continue Shopping.");
+    };
  
 });

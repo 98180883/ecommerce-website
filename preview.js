@@ -3,39 +3,39 @@
 {
 name : "ocaml",
 price :100,
-img:"card1.png"
+img:"card1.webp"
 },
 {
 name : "python",
 price :100,
-img:"card2.png"
+img:"card2.webp"
 },
 {
 name : "HTMl & CSS",
 price :100,
-img:"card3.png"}
+img:"card3.webp"}
 ,
 {
 name : "JavaScript part-I",
 price :100,
-img:"card4.png"
+img:"card4.webp"
 }
 ,
 {
 name : "C++ Project part-I",
 price :100,
-img:"card5.png"
+img:"card5.webp"
 }
 ,
 {
 name : "Electronics-I",
 price :100,
-img:"card6.png"
+img:"card6.webp"
 }
 ,{
 name : "Electronics-II",
 price :100,
-img:"card7.png"
+img:"card7.webp"
 }
 
 ];

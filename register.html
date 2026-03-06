@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
          <meta charset = "UTF-8">
    <meta name ="viewport"
    content="width=device-width, initial-scale =1.0" >
         <title>Register Page</title>
         <style>
+            header{
+                font-size: 24px;
+                  color:#ffffff;
+                       background-color:  #6d99f1;
+                       padding:10px;
+            }
             body {
+                padding:0;
+                margin: 0;
                 text-align:center;
                 font-family: Arial, sans-serif;
-                margin: 20px;
-                font-size:20px;
+                font-size:18px;
                 background-color:#ffffff;
+            }
+            .register-box{
+             display:flex;
+           flex-direction:column;
+           justify-content: center;
+           align-items: flex-start;
+             gap:10px;
+             background:#cccccc;
+            padding:20px;
+            width:260px;
+            margin:10px auto;
+           border-radius:8px;
             }
             input {
                 padding: 10px;
-                margin: 5px 0;
-                width: 200px;
+               width:90%;
             }
             button {
                 padding: 10px 20px;
@@ -29,6 +47,10 @@
                 background-color: #4fe929;
             }
             @media (max-width:720px){
+                header{
+                       font-size:20px;
+                       font-weight: bold;
+                }
                 body{
                     font-size: 14px;
                 }
@@ -36,24 +58,27 @@
             </style>
     </head>
 <body>
-<p>
-  Already have an account?
-  <a href="login.html">Login</a>
-</p>
-
-<h2>Create Your Account To Enjoy A New World Of E-Books</h2>
+<header>
+    <p>Create Your Account To Enjoy A New World Of E-Books</p>
+</header>
+<main>
+<div class='register-box'>
+    <label>Email</label>
 <input type="email" id="email" placeholder="Enter email">
-<br><br>
+   <label>Create User Name</label>
 <input type="text" id="newUser" placeholder="Create username">
-<br><br>
+   <label>Create Password</label>
 <input type="password" id="newPass" placeholder="Create password">
-<br><br>
+   <label>Confirm Password</label>
 <input type="password" id="confirmPass" placeholder="Confirm password">
-<br><br>
 <button id="Register-btn">Register</button>
-
+</div>
+<br>
+ Already have an account?
+  <a href="login.html">Login</a>
 <p id="msg"></p>
 
 <script src="register.js"></script>
+</main>
 </body>
 </html>

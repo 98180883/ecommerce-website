@@ -4,18 +4,25 @@
          <meta charset = "UTF-8">
    <meta name ="viewport"
    content="width=device-width, initial-scale =1.0" >
-        <title>Login Page</title>
+        <title>Login for better offers</title>
         <style>
+            body,html{
+                margin: 0;
+                padding:0;
+            }
             header {
+                
                 text-align:center;
-                font-size:10px;
-                background-color:#a6dae6;
+                font-size:24px;
+                font-weight: bold;
+                background-color: #6d99f1;
+                color: #ffffff;
+                padding:5px;
             }
             body {
                 text-align: center;
                 font-family: Arial, sans-serif;
-                margin: 20px;
-                font-size:20px;
+                font-size:16px;
                 background-color:#ffffff;
             }
             input {
@@ -23,9 +30,22 @@
                 margin: 5px 0;
                 width: 200px;
             }
+            #login-box{
+                    display:flex;
+           flex-direction:column;
+           justify-content: center;
+           align-items: flex-start;
+             gap:10px;
+             background:#cccccc;
+             color: #000000;
+            padding:20px;
+            width:260px;
+            margin:10px auto;
+           border-radius:8px;
+            }
             button {
                 padding: 10px 20px;
-                background-color: #60c649;
+                background-color: #86ff6b;
                 color: rgb(19, 11, 15);
                 border: none;
                 cursor: pointer;
@@ -33,24 +53,30 @@
             button:hover {
                 background-color: #4fe929;
             }
+            @media (max-width:900px){
+                header{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
             </style>
     </head>
 <body>
     <header>
-        <h1> login to your account </h1>
+        <p>Login for better offers</p>
     </header>
 
 
-<h2>Login</h2>
-
+<h4>Welcome back Reader!</h4>
+<div id="login-box">
+    <label>Enter Username:</label>
 <input type="text" id="username" placeholder="Enter username">
-<br><br>
-
+   <label >Enter Password:</label>
 <input type="password" id="password" placeholder="Enter password">
-<br><br>
+
 
 <button id="login-btn">Login</button>
-
+</div>
 <p id="msg"></p>
 <p>
   New user?
