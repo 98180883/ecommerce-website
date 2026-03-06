@@ -218,7 +218,7 @@ footer{
   font-size: 18px;
   text-align: center;
 }
-@media (max-width: 720px) {
+@media (max-width: 1050px) {
 
   header {
     flex-direction: column;
