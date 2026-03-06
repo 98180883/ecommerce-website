@@ -89,12 +89,12 @@ cursor:pointer;
 .user-actions{
   display: flex;
   align-items: center;
-  gap:10px;
+  gap:15px;
 }
 .login-link img,
 .cart_whole img {
-  width: 32px;
-  height:32px;
+  width: 48px;
+  height:36px;
   display: block;
   transition: 0.2s ease;
   cursor: pointer;
@@ -415,8 +415,8 @@ background: #f1f1f171;
   flex-direction: column;
      justify-content: flex-start; /* start from top */
     align-items: flex-start;      /* align left for links */
-    padding-top: 50px;   
-  gap:20px;
+    padding-top:40px;   
+  gap:10px;
   transition:0.3s ease;
   z-index:1000;
     box-shadow: -5px 0 20px rgba(0,0,0,0.2);
