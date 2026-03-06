@@ -26,8 +26,13 @@ cart page style */
   background-color:var(--bg-all);
    color: var(--text-color);
 }
+body{
+  display: flex;
+  flex-direction: column;
+}
 
      main{
+      flex-grow: 1;
       min-height: 100vh;
       background-color:var(--bg-main);
 color:var(--text-dark);
@@ -207,6 +212,8 @@ font-size: 20px;
   height:30px;
 }
 footer{
+  background: #000000;
+  color: #f1f1f1;
   padding:20px;
   font-size: 18px;
   text-align: center;
@@ -252,15 +259,19 @@ header h1{
   .checkout input,
   .checkout textarea {
     width: 90%;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #security {
-    font-size: 16px;
+    font-size: 14px;
    
   }
-
+#security img{
+  width:24px ;
+  height:24px;
+}
   footer {
-    font-size: 16px;
+    padding: 10px;
+    font-size: 14px;
   }
 }

@@ -11,7 +11,7 @@ A fully functional, multi-page frontend e-commerce website built with HTML, CSS,
 
 🍔 Hamburger Menu – Responsive navigation for mobile & desktop
 
-🔍 Search Functionality – Quickly find products
+🔍 Search Functionality with keyboard support – Easily find products
 
 📄 Multi-Page Layout – About , Home, Products,Contact page ,login & sign-up pages
 
@@ -23,7 +23,8 @@ A fully functional, multi-page frontend e-commerce website built with HTML, CSS,
 
 📊 SEO Friendly – Proper meta tags and semantic HTML
 
-⚡ Performance Optimization – Lazy loading, image compression for faster load times.
+⚡ Performance Optimization – Lazy loading, image compression for faster load times
+
 
 
 🛠️ Technologies Used:

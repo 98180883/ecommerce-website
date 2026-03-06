@@ -3,8 +3,7 @@ let search_btn = document.getElementById("searchbtn");
 let result = document.getElementById("result");
 
 let hideTimeout; // store timeout id
-
-search_btn.addEventListener("click", function () {
+ function search() {
 
   clearTimeout(hideTimeout); // clear previous timeout
   result.style.display = "block"; // ensure visible
@@ -51,7 +50,14 @@ search_btn.addEventListener("click", function () {
     result.innerText = "Product not found, please try again";
   }
 
-  autoHide(); // call hide function once
+  autoHide();
+}
+
+
+
+search_btn.addEventListener("click", function (e) {
+  search();
+  // call hide function once
 });
 
 function autoHide() {
@@ -60,3 +66,10 @@ function autoHide() {
     result.style.display = "none";
   }, 5000);
 }
+
+searchbox.addEventListener("keydown", function(e) {
+  e.preventDefault();
+  if(e.key==="Enter"){
+  search();
+  }
+})
