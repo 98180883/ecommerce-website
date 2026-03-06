@@ -30,7 +30,8 @@ Main page style */
 min-height: 100vh;
  font-family:Arial , sans-serif;
 background-color:var(--bg-main);
- scroll-behavior: smooth;         
+ scroll-behavior: smooth;
+          
  }  
 
       header{
@@ -350,20 +351,21 @@ cursor :not-allowed;
 @media (max-width:1050px) {
   header {
  margin:10px auto;
-    gap: 10px;
-    padding: 10px;
+ gap:10px;
+  padding: 10px;
   }
+
 .search{
-  width: 60%;
+  width: 70%;
   max-width: 240px;
 }
   #store-title {
      position: static;
-    font-size: 24px;
+    font-size:26px;
   }
   
   #searchbox {
-    width:70%;
+    width:80%;
     font-size:16px;
   }
 
@@ -382,19 +384,21 @@ cursor :not-allowed;
 gap:8px;
   }
   .login-link img , .cart_whole img{
-  width:24px ;
+  width:20px ;
     height:28px ;
 
   }
   /* Navigation */
   
   #menu-btn{
-     display: block;
-  margin-left: auto;
-    padding:8px;
-    font-size:16px;
-    position: relative;
+background: #f1f1f171;
+   display: block;
+  position: fixed; 
+ right:2px;
+  top: 10px;
   z-index: 2000;
+  border-radius:24px;
+ font-size:16px;
   }
   .nav {
     display: none;
@@ -408,26 +412,26 @@ gap:8px;
   height:100vh;
   background: var(--card-bg);
   display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  flex-direction: column;
+     justify-content: flex-start; /* start from top */
+    align-items: flex-start;      /* align left for links */
+    padding-top: 50px;   
   gap:20px;
   transition:0.3s ease;
   z-index:1000;
     box-shadow: -5px 0 20px rgba(0,0,0,0.2);
   }
-  .mob-nav.open{
-    right:0;
+ .mob-nav a {
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
     font-size: 16px;
-       color: var(--text-color);
-  }
-.mob-nav a {
-  font-weight: bold;
-  color:var(--text-color);
-  font-size: 16px;
-  text-decoration: none;
 }
-
+.mob-nav.open {
+    right: 0;
+}
 .middle-container{
   height:180px;
   margin: 20px auto;
@@ -484,7 +488,7 @@ gap:8px;
   }
 #L-slideBtn,
 #R-slideBtn {
-  font-size: 18px;
+  font-size: 14px;
   top:30%;
 }
 
