@@ -61,4 +61,4 @@ Name: Dipanjan Karmakar
 
 portfolio:https://98180883.github.io/portfolio/
 
-Email: dipanjan.karmakar50@gmail.com
+Email: dipanjankarmakar50@gmail.com
