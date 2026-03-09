@@ -106,6 +106,11 @@ function updateFeedback(message, color) {
   if (cart_feedback) {
     cart_feedback.innerText = message;
     cart_feedback.style.color = color;
+    cart_feedback.classList.add("show");
+
+setTimeout(()=>{
+cart_feedback.classList.remove("show");
+},3000);
   }
 }
 
@@ -150,7 +155,7 @@ function updateUIAdd(parent,index){
 let addBtn = parent.querySelector(".p_button");
 
 updateCartSummaryUI();
-updateFeedback(products[index].name + " added " + products[index].cartQTY, "green");
+updateFeedback(products[index].name + " e-book added " + products[index].cartQTY, "green");
 }
 
 function updateUIDel(parent , index){
@@ -163,9 +168,7 @@ addBtn.innerText = "+" + products[index].cartQTY;
  updateCartSummaryUI();
 
 updateFeedback(
-  products[index].name + " removed. No of " +
-  products[index].name + " in cart: " +
-  products[index].cartQTY,
+  products[index].name + " removed from cart" ,
   "red"
 );
 }

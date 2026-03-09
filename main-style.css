@@ -89,12 +89,12 @@ cursor:pointer;
 .user-actions{
   display: flex;
   align-items: center;
-  gap:15px;
+  gap:20px;
 }
 .login-link img,
 .cart_whole img {
-  width: 48px;
-  height:36px;
+  width:35px;
+  height:30px;
   display: block;
   transition: 0.2s ease;
   cursor: pointer;
@@ -265,7 +265,7 @@ left: 40px;
   align-items: flex-start;
   
   padding: 10px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.005);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .price{
@@ -295,7 +295,7 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.005);
   gap:10px;
 }
 .p_button , .d_button {
-  color:var(--text-dark);
+  color:var(--text-color);
   border-radius:30px;
   font-size:18px;
   padding:4px 10px;
